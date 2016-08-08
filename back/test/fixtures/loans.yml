@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  user: one
+  amount_loan: 1
+  balance: 1
+  state: one
+
+two:
+  user: two
+  user: two
+  amount_loan: 1
+  balance: 1
+  state: two

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  loan: one
+  interest: 9.99
+  quota: 1
+  date: 2016-08-06
+
+two:
+  loan: two
+  interest: 9.99
+  quota: 1
+  date: 2016-08-06

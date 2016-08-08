@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @contribute.user %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @contribute.event %>
+</p>
+
+<p>
+  <strong>Quota:</strong>
+  <%= @contribute.quota %>
+</p>
+
+<p>
+  <strong>Snack:</strong>
+  <%= @contribute.snack %>
+</p>
+
+<p>
+  <strong>Fine:</strong>
+  <%= @contribute.fine %>
+</p>
+
+<p>
+  <strong>Debt:</strong>
+  <%= @contribute.debt %>
+</p>
+
+<%= link_to 'Edit', edit_contribute_path(@contribute) %> |
+<%= link_to 'Back', contributes_path %>

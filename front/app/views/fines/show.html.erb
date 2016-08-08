@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fine.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fine.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @fine.price %>
+</p>
+
+<%= link_to 'Edit', edit_fine_path(@fine) %> |
+<%= link_to 'Back', fines_path %>

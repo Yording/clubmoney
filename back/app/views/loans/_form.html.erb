@@ -1,0 +1,42 @@
+<%= form_for(loan) do |f| %>
+  <% if loan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+
+      <ul>
+      <% loan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id,User.where({active:true}),:id,:name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.collection_select :user_id,User.where({active:true,role_id:1}),:id,:name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount_loan %>
+    <%= f.number_field :amount_loan %>
+  </div>
+
+  <div class="field">
+    <%= f.label :balance %>
+    <%= f.number_field :balance %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state_id %>
+    <%= f.collection_select :state_id,State.all,:id,:state %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

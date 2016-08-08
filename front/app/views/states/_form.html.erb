@@ -1,0 +1,36 @@
+
+<div class="container">
+  <div class="row">
+      <%= form_for(@state,class:"col s12") do |f| %>
+       <% if state.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(state.errors.count, "error") %> prohibited this state from being saved:</h2>
+
+          <ul>
+          <% state.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+        <div class="row">
+          <div class="input-field col s6">
+             <%= f.text_field :state %>
+             <%= f.label :state %>
+          </div>
+        </div>
+         <div class="row">
+       
+          <div class="input-field col s12">
+             <%= f.text_area :description,id:"textarea1",class:"materialize-textarea" %>
+             <%= f.label :description,for:"textarea1" %>
+          </div>
+        </div>
+        <div class="actions">
+         
+          <%= f.submit class:'btn btn-large green' %>
+        </div>
+      <% end %>
+    </div>
+</div>
+

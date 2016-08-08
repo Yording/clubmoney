@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Contributes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Event</th>
+      <th>Quota</th>
+      <th>Snack</th>
+      <th>Fine</th>
+      <th>Debt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contributes.each do |contribute| %>
+      <tr>
+        <td><%= contribute.user.name + " "+ contribute.user.last_name %></td>
+        <td><%= contribute.event.date %></td>
+        <td><%= contribute.quota %></td>
+        <td><%= contribute.snack %></td>
+        <td><%= contribute.fine.name %></td>
+        <td><%= contribute.debt %></td>
+        <td><%= link_to 'Show', contribute %></td>
+        <td><%= link_to 'Edit', edit_contribute_path(contribute) %></td>
+        <td><%= link_to 'Destroy', contribute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contribute', new_contribute_path %>

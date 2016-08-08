@@ -1,0 +1,47 @@
+<%= form_for(contribute) do |f| %>
+  <% if contribute.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contribute.errors.count, "error") %> prohibited this contribute from being saved:</h2>
+
+      <ul>
+      <% contribute.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_id %>
+    <%= f.text_field :event_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quota %>
+    <%= f.number_field :quota %>
+  </div>
+
+  <div class="field">
+    <%= f.label :snack %>
+    <%= f.number_field :snack %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fine_id %>
+    <%= f.text_field :fine_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :debt %>
+    <%= f.number_field :debt %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
